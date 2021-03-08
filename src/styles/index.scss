@@ -262,11 +262,7 @@ html {
         align-items: center;
         padding: 2rem;
     }
-    & h3 {
-        font-size: 1.8rem;
-        font-weight: 600;
-        padding-bottom: 1rem;
-    }
+
     & img {
         width: 150px;
         height: 150px;
@@ -299,6 +295,7 @@ html {
     }
 }
 .form {
+    width: 100%;
     &__input {
         display: flex;
         justify-content: center;
@@ -306,6 +303,7 @@ html {
         margin-right: 2rem;
         @include responsive(tablet) {
             margin-right: 0;
+            padding: 1rem 23rem;
         }
 
         &-name {
@@ -332,11 +330,21 @@ html {
             }
         }
     }
+    & h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        padding-bottom: 1rem;
+        @include responsive(tablet) {
+            font-size: 1.4rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+    }
     &__message {
         padding: 2rem 50rem;
         margin-right: 2rem;
         @include responsive(tablet) {
-            padding: 1rem 50rem;
+            padding: 1rem;
             margin-right: 0;
         }
         & textarea {
@@ -354,7 +362,7 @@ html {
         padding: 1rem 50rem;
         margin-right: 2rem;
         @include responsive(tablet) {
-            padding: 0 50rem;
+            padding: 0 1rem;
             margin-right: 0;
         }
         & button {
@@ -379,11 +387,21 @@ html {
     justify-content: space-evenly;
     flex-direction: row;
     padding: 3rem;
-    &__mayfarmer,
-    &__eyamignardise {
+    @include responsive(tablet) {
+        flex-direction: column;
+        align-items: center;
+    }
+    & h3 {
+        @include responsive(tablet) {
+            margin-bottom: 3rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__mayfarmer {
         border-radius: 4px;
         background: #fff;
-        width: 25%;
+        width: 75%;
         padding-bottom: 2rem;
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         & img {
