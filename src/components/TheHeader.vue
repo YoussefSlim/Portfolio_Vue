@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <header class="nav">
     <div class="nav__media">
       <a href="www.linkedin.com/in/youssef-slim-80a912189">
         <img src="../assets/linkedin.png" alt="logo linkedin" />
@@ -8,26 +8,33 @@
         <img src="../assets/github.png" alt="logo github" />
       </a>
     </div>
-    <ul class="nav__list">
-      <li class="nav__list__items">
-        <a href="#about">A propos de moi</a>
-      </li>
-      <li class="nav__list__items">
-        <a href="#skills">Compétences</a>
-      </li>
-      <li class="nav__list__items">
-        <a href="#projects">Projets</a>
-      </li>
-      <li class="nav__list__items">
-        <a href="#contact">Contactez-moi</a>
-      </li>
-    </ul>
-  </div>
+    <div class="nav__list" :style="{ display: display }">
+      <a href="#about">A propos de moi</a>
+      <a href="#skills">Compétences</a>
+      <a href="#projects">Projets</a>
+      <a href="#contact">Contactez-moi</a>
+    </div>
+    <div class="btn-toggler">
+      <button @click="displayMenu">
+        <img src="../assets/menu.png" alt="menu" />
+      </button>
+    </div>
+  </header>
 </template>
 
 <script>
 export default {
   name: "TheHeader",
+  data() {
+    return {
+      display: "",
+    };
+  },
+  methods: {
+    displayMenu() {
+      this.display === "" ? (this.display = "none") : (this.display = "");
+    },
+  },
 };
 </script>
 

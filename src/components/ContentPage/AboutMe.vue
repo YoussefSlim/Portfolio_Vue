@@ -1,5 +1,5 @@
 <template>
-  <div id="about" class="about">
+  <section id="about" class="about">
     <div class="about__avatar">
       <img src="../../assets/youssef.png" alt="my avatar" />
     </div>
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
