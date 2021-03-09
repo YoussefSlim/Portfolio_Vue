@@ -3,8 +3,19 @@
 
 <template>
   <section id="projects" class="projects">
-    <h3>Mes projets</h3>
-    <div class="projects__mayfarmer">
+    <h3>Projet de fin d'étude</h3>
+    <p v-show="toShowOnHover">
+      Création d'une plateforme e-commerce axée marketplace, sur laquelle les
+      producteurs pourront proposer à la vente leurs produits, à des clients
+      locaux, qui pourront soit récupérer leur commande chez le producteur, soit
+      être livrés par ce dernier.
+    </p>
+
+    <div
+      class="projects__mayfarmer"
+      @mouseover="mouseEnter"
+      @mouseleave="mouseLeave"
+    >
       <img src="../../assets/myfarmer.png" alt="chez mon fermier" />
       <div class="projects__mayfarmer-techno">
         <ul>
@@ -19,5 +30,17 @@
 
 
 <script>
-export default {};
+export default {
+  data() {
+    return { toShowOnHover: false };
+  },
+  methods: {
+    mouseEnter() {
+      this.toShowOnHover = !this.toShowOnHover;
+    },
+    mouseLeave() {
+      this.toShowOnHover = false;
+    },
+  },
+};
 </script>
