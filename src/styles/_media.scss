@@ -12,7 +12,7 @@
       @content;
     }
   } @else if $dvice == descktop {
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px) and (max-width: 1400px) {
       @content;
     }
   } @else if $dvice == bigDescktop {

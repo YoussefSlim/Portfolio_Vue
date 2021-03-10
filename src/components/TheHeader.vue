@@ -1,11 +1,11 @@
 <template>
   <header class="nav">
-    <div class="btn-toggler">
+    <div class="nav__btn">
       <button @click="displayMenu">
         <img src="../assets/menu.png" alt="menu" />
       </button>
     </div>
-    <div class="nav__list" :style="{ display: display }">
+    <div class="nav__list" :class="[isActive ? 'open' : '']">
       <a href="#about">A propos de moi</a>
       <a href="#skills">Compétences</a>
       <a href="#projects">Projets</a>
@@ -27,12 +27,13 @@ export default {
   name: "TheHeader",
   data() {
     return {
-      display: "",
+      isActive: false,
     };
   },
   methods: {
     displayMenu() {
-      this.display === "" ? (this.display = "none") : (this.display = "");
+      !this.isActive ? (this.isActive = true) : (this.isActive = false);
+      console.log(this.isActive);
     },
   },
 };

@@ -9,6 +9,16 @@ html {
     font-family: $font-family;
 }
 /**--nav--*/
+.open {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-top: 3rem !important;
+    margin-left: 0;
+
+    &:hover {
+        display: flex !important;
+    }
+}
 .nav {
     background: #1f71c6;
     padding: 0.5rem;
@@ -19,22 +29,28 @@ html {
     @include responsive(tablet) {
         display: flex;
         flex-direction: column;
-        padding: 2rem;
+    }
+    &__btn {
+        display: none;
+
+        @include responsive(tablet) {
+            display: block;
+        }
     }
     & button {
         background: transparent;
         border: none;
         display: none;
         @include responsive(tablet) {
-            display: flex;
-            position: absolute;
-            top: 0.9rem;
-            left: 1rem;
+            top: 0.5rem;
+            display: block;
         }
         @include responsive(mobile) {
             top: 0.5rem;
+            display: block;
         }
     }
+
     &__list {
         display: flex;
         justify-content: space-evenly;
@@ -42,11 +58,11 @@ html {
         font-size: 1rem;
         align-items: center;
         margin-top: 0.9rem;
-        margin-left: -81rem;
+
         @include responsive(tablet) {
-            display: flex;
-            flex-direction: column;
-            margin-top: 3rem;
+            display: none;
+        }
+        @include responsive(descktop) {
             margin-left: 0;
         }
         & a {
@@ -104,6 +120,9 @@ html {
         @include responsive(tablet) {
             padding-left: 0;
             margin-top: 4rem;
+        }
+        @include responsive(descktop) {
+            padding-left: 9rem;
         }
     }
 
@@ -187,9 +206,15 @@ html {
             font-size: 1rem;
             padding: 0 1rem;
         }
+        @include responsive(descktop) {
+            width: 90%;
+        }
     }
     &__link {
         padding-top: 1.4rem;
+        @include responsive(descktop) {
+            padding-top: 1.2rem;
+        }
 
         & a {
             font-size: 1.2rem;
@@ -257,6 +282,9 @@ html {
         @include responsive(tablet) {
             flex-direction: column;
             padding: 2rem 3rem 0;
+        }
+        @include responsive(descktop) {
+            padding: 3rem 5rem 0;
         }
     }
     &__categories {
@@ -328,6 +356,9 @@ html {
         height: 150px;
         border-radius: 215px;
         margin-inline: 51rem;
+        @include responsive(descktop) {
+            margin-inline: 36rem;
+        }
     }
     &__description {
         padding: 1rem 2rem;
@@ -344,6 +375,10 @@ html {
         }
         @include responsive(tablet) {
             margin: 4rem 0 0 0;
+        }
+        @include responsive(descktop) {
+            margin: 2rem 0 3rem 17rem;
+            width: 60%;
         }
         & p {
             font-size: 1.2rem;
@@ -371,6 +406,10 @@ html {
         @include responsive(mobile) {
             margin: 2rem;
         }
+        @include responsive(descktop) {
+            text-align: center;
+            margin-inline: 0;
+        }
     }
     & input,
     textarea {
@@ -395,6 +434,9 @@ html {
             height: 2.5rem;
             width: -webkit-fill-available;
         }
+        @include responsive(descktop) {
+            width: 32%;
+        }
     }
     & #cemail {
         margin-left: 2.2rem;
@@ -404,6 +446,9 @@ html {
         @include responsive(mobile) {
             margin-left: 0;
         }
+        @include responsive(descktop) {
+            margin-left: 2rem;
+        }
     }
     & #cname {
         margin-left: 37rem;
@@ -412,6 +457,9 @@ html {
         }
         @include responsive(mobile) {
             margin-left: 0;
+        }
+        @include responsive(descktop) {
+            margin-left: 14rem;
         }
     }
     & textarea {
@@ -429,6 +477,10 @@ html {
             margin-bottom: 1rem;
             margin-left: 0rem;
             width: -webkit-fill-available;
+        }
+        @include responsive(descktop) {
+            margin-left: 14rem;
+            width: 66.6%;
         }
     }
 
@@ -476,6 +528,10 @@ html {
         border-radius: 4px;
         text-align: center;
         align-self: center;
+        @include responsive(descktop) {
+            width: 37%;
+            padding: 4rem 2rem;
+        }
     }
     & h3 {
         display: flex;
