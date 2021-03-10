@@ -1,10 +1,19 @@
 <template>
   <section id="contact" class="contact">
     <div class="avatar">
-      <img src="../../assets/youssef.png" alt="mon avatar" />
+      <img
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-center"
+        src="../../assets/youssef.png"
+        alt="mon avatar"
+      />
     </div>
 
-    <div class="contact__description">
+    <div
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-center"
+      class="contact__description"
+    >
       <p>
         Je suis actuellement à l'écoute du marché. Si vous souhaitez m'embaucher
         pour votre projet, veuillez utiliser le formulaire ci-dessous pour me

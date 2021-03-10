@@ -254,6 +254,7 @@ html {
         font-size: 30px;
         font-weight: 600;
         padding: 2rem;
+        color: #1f71c6;
         @include responsive(tablet) {
             font-size: 1.5rem;
             padding: 3rem;
@@ -397,6 +398,7 @@ html {
         font-weight: 600;
         padding-bottom: 2rem;
         margin-inline: 50rem;
+        color: #1f71c6;
         @include responsive(tablet) {
             font-size: 1.4rem;
             text-align: center;
@@ -486,7 +488,7 @@ html {
 
     & button {
         width: 36%;
-        margin-left: -41rem;
+        margin-left: -41.4rem;
         background: #1f71c6;
         color: #fff;
         border: 1px solid gray;
@@ -509,36 +511,55 @@ html {
 }
 
 /**--projects--**/
+.animation {
+    animation: slidleft 2s forwards;
+    @keyframes slidleft {
+        from {
+            margin-left: 0;
+        }
 
+        to {
+            margin-left: 61rem;
+        }
+    }
+}
 .projects {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
     padding: 3rem;
     @include responsive(tablet) {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
-
+    &__details {
+        display: flex;
+        justify-content: center;
+    }
     & p {
-        width: 20%;
-        padding: 5rem 2rem;
+        width: 25%;
+        padding: 6rem 2rem;
         line-height: 1.5rem;
-        box-shadow: 0 0.125rem 0.25rem #00000013;
         border-radius: 4px;
         text-align: center;
-        align-self: center;
-        @include responsive(descktop) {
-            width: 37%;
-            padding: 4rem 2rem;
+        display: inline-block;
+        border: 1px solid lightgrey;
+        margin-left: 0;
+        position: absolute;
+        @include responsive(tablet) {
+            display: none;
         }
     }
+
+    @include responsive(descktop) {
+        width: 37%;
+        padding: 4rem 2rem;
+    }
+
     & h3 {
-        display: flex;
         margin-bottom: 3rem;
         margin-right: 2rem;
         font-size: 1.5rem;
-        align-items: center;
+        color: #1f71c6;
+        text-align: center;
         @include responsive(tablet) {
             margin-bottom: 3rem;
             font-size: 1.5rem;
@@ -546,14 +567,17 @@ html {
     }
 
     &__mayfarmer {
+        position: relative;
         border-radius: 4px;
         background: #fff;
-        width: 25%;
-        padding-bottom: 2rem;
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-        @include responsive(mobile) {
+        width: 28%;
+        padding-bottom: 0.9rem;
+        border: 1px solid #a9a9a94a;
+        display: inline-block;
+        @include responsive(tablet) {
             width: 100%;
         }
+
         & img {
             width: 100%;
         }

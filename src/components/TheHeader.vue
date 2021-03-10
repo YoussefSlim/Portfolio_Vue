@@ -12,10 +12,10 @@
       <a href="#contact">Contactez-moi</a>
     </div>
     <div class="nav__media">
-      <a href="https://www.linkedin.com/in/youssef-slim">
+      <a href="https://www.linkedin.com/in/youssef-slim" target="_blank">
         <img src="../assets/linkedin.png" alt="logo linkedin" />
       </a>
-      <a href="https://github.com/YoussefSlim?tab=repositories">
+      <a href="https://github.com/YoussefSlim?tab=repositories" target="_blank">
         <img src="../assets/github.png" alt="logo github" />
       </a>
     </div>
