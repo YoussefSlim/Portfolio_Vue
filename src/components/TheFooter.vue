@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <span>©2021 Youssef Slim</span>
+    <span> © {{ year }} Youssef Slim</span>
     <span>Tel : 06.65.58.01.27</span>
     <span>Email : slimyoussef9511@gmail.com</span>
     <span class="githib">
@@ -13,17 +13,23 @@
 
 <script>
 export default {
-  name: "App",
+  data() {
+    return {
+      year: new Date().getFullYear(),
+    };
+  },
 };
 </script>
 
 <style lang="scss">
 @import "../styles/_media";
+@import "../styles/_vars";
+
 .footer {
   text-align: center;
   padding: 2rem;
-  background: #41a4f5;
-  color: #fff;
+  background: #f3f3f4;
+  color: $color-noir;
   @include responsive(tablet) {
     display: flex;
     flex-direction: column;

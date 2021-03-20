@@ -1,12 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Niramit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 $font-family: "Open Sans", sans-serif;
-$bg-light: #fbfbfb;
-$bg-dark: #f1f1f1;
+$font-family-title: "Black Han Sans", sans-serif;
 
-$color: #3b5054;
-$color-primary: #f17d45;
+$color-principal: #f7f8fae5;
+$color-secondaire: #d3d3d3c8;
+$color-link: #41a4f54a;
+$color-sous-cadre: #121217;
+$color-sous-text: #005675;
+$color-sous-text2: #7dc8dd;
+$color-sous-text3: #6bf;
+$color-text-non-active: #3d3d3d;
+$color-blanc: #ffffff;
+$color-noir: #000000;
+$padding: 2rem;
 
-$gutter: 1rem;
-$width-loader: 9rem;
-$time: 3s;
+$accent-theme-color: #7a306c;
+$accent-theme-color2: #8d909b;
+$dark-theme-color: #101010;
+$light-theme-color: #fff;
+
+$portfolio-item-width: 450px;
+$portfolio-item-height: 300px;
+
+$portfolio-item-info-offset: 7px;
+
+$portfolio-link-dimensions: 35px;
+$portfolio-link-offset: 10px;
