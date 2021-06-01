@@ -10,6 +10,10 @@
     <div class="modal-content">
       <span @click="closeModal" class="modal-content-close">&times;</span>
       <p>{{ message }}</p>
+      <p>{{ message }}</p>
+      <p>{{ message }}</p>
+      <p>{{ message }}</p>
+      <p>{{ message }}</p>
     </div>
   </div>
 </template>
